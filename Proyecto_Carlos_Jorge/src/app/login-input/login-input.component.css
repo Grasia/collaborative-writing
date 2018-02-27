@@ -8,5 +8,12 @@
 }
 
 .example-full-width {
+    margin-top: 10px;
   width: 100%;
+}
+
+.login{
+    
+    color: #607D8B;
+    
 }

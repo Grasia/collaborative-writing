@@ -11,7 +11,11 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { ParticiparComponent } from './participar/participar.component';
 import { CdkTableModule } from '@angular/cdk/table';
-import { LoginInputComponent} from './login-input/login-input.component'
+import { LoginInputComponent} from './login-input/login-input.component';
+import { UserService } from './user.service';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { AdminComponent } from './admin/admin.component';
+import { ToggleComponent } from './toggle/toggle.component';
 
 import {
   MatAutocompleteModule,
@@ -94,7 +98,10 @@ export class MaterialModule {}
     InicioComponent,
     LoginComponent,
     ParticiparComponent,
-    LoginInputComponent
+    LoginInputComponent,
+    UsuarioComponent,
+    AdminComponent,
+    ToggleComponent
   ],
   imports: [
     BrowserModule,
@@ -104,7 +111,7 @@ export class MaterialModule {}
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent],
 
 })

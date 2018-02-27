@@ -1,9 +1,14 @@
 <div>
     <h1>¡Pagina de login!</h1>
-    Aqui va un formulario de login hecho con la libreria materials.
+    
 </div>
-<div class = 'formulario'>
 
-    <app-login-input></app-login-input>
+    <app-toggle *ngIf="isLog()"></app-toggle>
+
+<div class = 'formulario'>
+    
+    <app-login-input *ngIf="!isLog()"></app-login-input>
+    <button class='login' *ngIf="isLog()" (click)="logout()" class='login' mat-raised-button>Logout</button>
+
     
 </div>
